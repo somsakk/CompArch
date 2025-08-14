@@ -16,7 +16,7 @@ float fixed_to_float(fixed_point_t input)
     return ((float)input / (float)(1 << FIXED_POINT_FRACTIONAL_BITS));
 }
 
-/* To convert from floating-point to fixed-point using the nearest rouding, 
+/* To convert from floating-point to fixed-point using the nearest rounding, 
 we follow this algorithm:
 1) Calculate x = floating_input * 2^(fractional_bits)
 2) Round x to the nearest whole number (e.g. round(x))
@@ -26,7 +26,7 @@ fixed_point_t float_to_fixed(float input)
     return (fixed_point_t)(round(input * (1 << FIXED_POINT_FRACTIONAL_BITS)));
 }
 
-void main() {
+int main() {
     // float xfloat = 3 +  0*1./2 + 1*1./4 + 1*1./8 + 0*1./16 + 1*1./32 ; // 0b011.01101 = 0x6d = 3.40625
     //   float xfloat = 5.0625; // 5.625 = 0xb4, 5.0625 = 0xa2 
     // float xfloat = fixed_to_float(0x01); // 0x01 = 0.03125 = 2^{-5}
