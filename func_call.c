@@ -7,7 +7,7 @@ int f2(int n, int m) { // n is a local variable in f2() function
     return n + m; // return the value of n
 }
 
-int f1(int n) { // n is a local variable in sum() function
+int f1(int n) { // n is a local variable in f1() function
     n = n + 1;
     printf("in f1: n = %d\n", n);
     return f2(n, 2*n);
