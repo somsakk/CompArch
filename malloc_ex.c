@@ -1,4 +1,5 @@
 // malloc_ex.c
+#include <stdio.h>
 #include <stdlib.h> // for malloc and free functions
 
 double* newMatrix(int m, int n) {
@@ -23,6 +24,14 @@ int main(void) {
     scanf("%d", &matrixSize); // read in the entered value and assign to matrixSize
     // memory is allocated for some code to use this identity matrix
     double* iden = newIdentityMatrix(matrixSize);
+
+    printf("Address of the matrix is %p\n", iden);
+    for (int i=0; i < matrixSize; i++) {
+        for (int j=0; j < matrixSize; j++) {
+            printf("%lf ", *(iden + i*matrixSize + j));
+        }
+        printf("\n");
+    }
     // deallocate the memory (don’t forget). Otherwise, memory leakage may occur.
     free(iden);
 }
