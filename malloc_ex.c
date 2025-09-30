@@ -32,6 +32,8 @@ int main(void) {
         }
         printf("\n");
     }
+    printf("Address of the last element is %p\n", iden + matrixSize*matrixSize - 1);
+    
     // deallocate the memory (don’t forget). Otherwise, memory leakage may occur.
     free(iden);
 }
