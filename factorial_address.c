@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 
-// Function prototypes
+// Function prototypes. If the function is defined after main(), we need to declare it first.
 int fact_i(int);
 int fact_r(int);
 
@@ -17,7 +17,7 @@ int b = 0;
 int main(void) {
   char cc = 'A';
   int n = 4;  // Overflow happens with a >= 28
-  int f[3];
+  int f[3]; // array to hold factorial results
 
   // size_of() operator returns the size of a variable or data type in bytes
   printf("sizeof(char) = %d, size of(int) = %d\n", (int) sizeof(char), (int) sizeof(int));
@@ -30,21 +30,25 @@ int main(void) {
   printf("Addresses: f = %p,  &f[0] = %p, &f[1] = %p, &f[2] = %p\n", (void*)f, (void*)&f[0], (void*)&f[1], (void*)&f[2]);
   printf("Address of global variable b = %p\n\n", (void*)&b);
 
-  // functions also have addresses, which can be printed using the function name
+  // Print addresses of functions. Functions also have addresses, which can be printed using the function name
   printf("Address of function main() = %p\n", (void*)main);
   printf("Address of function fact_i() = %p\n", (void*)fact_i);
   printf("Address of function fact_r() = %p\n\n", (void*)fact_r);
   
+  // Call the iterative factorial function and store the result in f[0]
   f[0] = fact_i(n) + b;
   printf("**main(): Iterative factorial of %d is %d\n", n, f[0]);
 
+  // Call the recursive factorial function and store the result in f[1]
   // f[1] = fact_r(n);
   // printf("**main(): Recursive factorial of %d is %d\n", n, f[1]);
 
+  // Call the iterative factorial function with n+1 and store the result in f[2]
   // f[2] = fact_i(n+1);    
   // printf("**main(): Iterative factorial of %d is %d\n", n+1, f[2]);
 }
 
+// Iterative factorial function
 int fact_i(int n) {
   int ans=1;
   printf("in fact_i(n = %d): &n = %p\n", n, (void*)&n);
@@ -56,6 +60,7 @@ int fact_i(int n) {
   return ans;
 }
 
+// Recursive factorial function
 int fact_r(int n) {
   int ans = -1;
 
