@@ -1,4 +1,4 @@
-// factorial_address.c
+// fact_address.c
 // This program computes the factorial of a number using both iterative and recursive methods.
 // It also prints the addresses of variables and functions to demonstrate memory allocation.
 // The addresses of local variables are on the stack, while global variables and functions are in the data segment.
@@ -16,8 +16,8 @@ int b = 0;
 
 int main(void) {
   char cc = 'A';
-  int n = 4;  // Overflow happens with a >= 28
-  int f[3]; // array to hold factorial results
+  int n = 4;  
+  int f[5]; // array to hold factorial results
 
   // size_of() operator returns the size of a variable or data type in bytes
   printf("sizeof(char) = %d, size of(int) = %d\n", (int) sizeof(char), (int) sizeof(int));
@@ -43,9 +43,21 @@ int main(void) {
   // f[1] = fact_r(n);
   // printf("**main(): Recursive factorial of %d is %d\n", n, f[1]);
 
-  // Call the iterative factorial function with n+1 and store the result in f[2]
-  // f[2] = fact_i(n+1);    
-  // printf("**main(): Iterative factorial of %d is %d\n", n+1, f[2]);
+  ///////////////////////////////////////////////////////////////////////////
+  // Students' exercise: 
+  // 1) Call the recursive factorial function with n+1 and store the result in f[2]
+  //(write your code here)
+  
+  // 2) Call the iterative factorial function with n = 13 and store the result in f[3]
+
+  // 3) Call the iterative factorial function with n = 28 and store the result in f[4]
+  // You should see overflow happens with n >= 14.  What is the value of f[4]?  Why does overflow occur?  What is the maximum value of n that can be computed without overflow?
+
+  // 4) Write a function named `print_factorials` to create another array of 20 integer elements, say int g[20], 
+  // and compute the factorial of numbers from 0 to 19, starting from g[0] = 1; then in a for loop, calculate g[i] = g[i-1] * i; and store the results in g[1], g[1], ..., g[19].
+  // and write for loop to print the results of calling the recursive factorial function with n = 0, 1, 2, ..., 27, 28, 29.  
+  // Print the results and their addresses.  You should see that the addresses are contiguous in memory.  
+  // print_factorials(20);
 }
 
 // Iterative factorial function
@@ -78,3 +90,14 @@ int fact_r(int n) {
   printf("in fact_r(n=%d): ans = %d, &ans = %p\n", n, ans, (void*)&ans);
   return ans;
 }
+
+// Function to print the factorials of numbers from 0 to N-1 using an array
+// and print their addresses.  This demonstrates that the array elements are contiguous in memory.
+// void print_factorials(int N) {
+//   int g[N];
+//   ________________
+//   for (___; ___; ___) {
+//     g[i] = g[i-1] * i;
+//     printf("g[%2d] = 0x%08x = %12d, address = %p\n", i, g[i], g[i], (void*)&g[i]);
+//   } 
+// }
