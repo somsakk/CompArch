@@ -40,24 +40,24 @@ int main(void) {
   printf("**main(): Iterative factorial of %d is %d\n", n, f[0]);
 
   // Call the recursive factorial function and store the result in f[1]
-  // f[1] = fact_r(n);
-  // printf("**main(): Recursive factorial of %d is %d\n", n, f[1]);
+  f[1] = fact_r(n);
+  printf("**main(): Recursive factorial of %d is %d\n", n, f[1]);
 
   ///////////////////////////////////////////////////////////////////////////
   // Students' exercise: 
-  // 1) Call the recursive factorial function with n+1 and store the result in f[2]
+  // 1) Call the recursive factorial function with n=5 and store the result in f[2]
   //(write your code here)
   
   // 2) Call the iterative factorial function with n = 13 and store the result in f[3]
 
-  // 3) Call the iterative factorial function with n = 28 and store the result in f[4]
+  // 3) Call the iterative factorial function with n = 14 and store the result in f[4]
   // You should see overflow happens with n >= 14.  What is the value of f[4]?  Why does overflow occur?  What is the maximum value of n that can be computed without overflow?
 
   // 4) Write a function named `print_factorials` to create another array of 20 integer elements, say int g[20], 
   // and compute the factorial of numbers from 0 to 19, starting from g[0] = 1; then in a for loop, calculate g[i] = g[i-1] * i; and store the results in g[1], g[1], ..., g[19].
   // and write for loop to print the results of calling the recursive factorial function with n = 0, 1, 2, ..., 27, 28, 29.  
   // Print the results and their addresses.  You should see that the addresses are contiguous in memory.  
-  // print_factorials(20);
+  // print_factorials(20);  // Don't forget to uncomment this line after you implement the function print_factorials() below.
 }
 
 // Iterative factorial function
