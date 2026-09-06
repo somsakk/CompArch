@@ -1,6 +1,4 @@
 //age.c
-
-
 #include <stdio.h> // ต้อง include ไฟล์ stdio.h ทีมีมาแล้วในไลบรารี่ เพื่อใช้ printf() ได้
 
 int main(void) {
