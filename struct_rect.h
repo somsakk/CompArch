@@ -25,5 +25,5 @@ void set_rect(rect *, point, point, int);
 void print_rect(rect, char *);
 void print_address_of_rect(rect *, char *);
 
-// Function prototype for printing the sizes of variables and data types
+// Function prototype for printing the sizes of variables and data types..
 void print_s (int *, int); 
