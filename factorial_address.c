@@ -60,6 +60,17 @@ int main(void) {
   // print_factorials(20);  // Don't forget to uncomment this line after you implement the function print_factorials() below.
 }
 
+// Function to print the factorials of numbers from 0 to N-1 using an array
+// and print their addresses.  This demonstrates that the array elements are contiguous in memory.
+// void print_factorials(int N) {
+//   int g[N];
+//   ________________
+//   for (___; ___; ___) {
+//     g[i] = g[i-1] * i;
+//     printf("g[%2d] = 0x%08x = %12d, address = %p\n", i, g[i], g[i], (void*)&g[i]);
+//   } 
+// }
+
 // Iterative factorial function
 int fact_i(int n) {
   int ans=1;
@@ -91,13 +102,3 @@ int fact_r(int n) {
   return ans;
 }
 
-// Function to print the factorials of numbers from 0 to N-1 using an array
-// and print their addresses.  This demonstrates that the array elements are contiguous in memory.
-// void print_factorials(int N) {
-//   int g[N];
-//   ________________
-//   for (___; ___; ___) {
-//     g[i] = g[i-1] * i;
-//     printf("g[%2d] = 0x%08x = %12d, address = %p\n", i, g[i], g[i], (void*)&g[i]);
-//   } 
-// }
