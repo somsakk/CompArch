@@ -54,8 +54,8 @@ int main(void) {
   // You should see overflow happens with n >= 14.  What is the value of f[4]?  Why does overflow occur?  What is the maximum value of n that can be computed without overflow?
 
   // 4) Write a function named `print_factorials` to create another array of 20 integer elements, say int g[20], 
-  // and compute the factorial of numbers from 0 to 19, starting from g[0] = 1; then in a for loop, calculate g[i] = g[i-1] * i; and store the results in g[1], g[1], ..., g[19].
-  // and write for loop to print the results of calling the recursive factorial function with n = 0, 1, 2, ..., 27, 28, 29.  
+  // and compute the factorial of numbers from 0 to 19, starting from g[0] = 1; then in a for loop, calculate g[i] = g[i-1] * i;
+  // and store the results in g[1], g[1], ..., g[19].
   // Print the results and their addresses.  You should see that the addresses are contiguous in memory.  
   // print_factorials(20);  // Don't forget to uncomment this line after you implement the function print_factorials() below.
 }
