@@ -10,7 +10,7 @@ int main(void) {
     // %d = integer
     printf("GPA: %.2f\n", gpa);
     // %.2f = float ทศนิยม 2 ตําแหน่ง
-    printf("เกรด: %c\n", grade);
+    printf("เกรด: %c = %d = %#x\n", grade, grade, grade);
     // %c = char
     printf("อายุ %d เกรด %c\n", age, grade); // ใส่หลายตัวได้
 

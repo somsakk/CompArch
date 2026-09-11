@@ -2,9 +2,7 @@
 This program continues from bit_manipulation1.c and demonstrates additional bit manipulation operations in C.
 It includes examples of left and right bit shifts, as well as clearing specific bits.
 */
-
 #include <stdio.h>
-
 int main() {
     unsigned int num = 0x23; // Example number
     printf("Original number: %u or %#x\n", num, num);
