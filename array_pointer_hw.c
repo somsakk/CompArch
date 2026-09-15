@@ -1,6 +1,5 @@
 // array_pointer_hw.c
 #include<stdio.h>
-// #include<stdint.h>
 
 int main(void)
 {

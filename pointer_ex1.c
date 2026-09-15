@@ -16,7 +16,7 @@ void foo2(int* nptr) {
 }
 
 int main() {
-    int n = 2;
+    int n = 2; 
     printf("in main: &n = %p\n", &n);
     printf("in main: n = %d\n", n);
     foo1(n);
