@@ -27,4 +27,6 @@ int main(void)
     // C allows accesing memory outside the array. 
     printf("ar[3] = %d\n", ar[3]);
     printf("ar[3] = %d\n", *(ar+3));
+    printf("Address of ar[3] is %p\n", &ar[3]);
+    printf("Address of ar[3] is %p\n", ar+3);
 }
