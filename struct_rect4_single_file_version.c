@@ -2,6 +2,8 @@
 This program demonstrates the use of structures in C. 
 It defines a point structure and a rectangle structure, and shows how to create instances of these structures, set their values, and print their sizes and addresses.
 I also demonstrate how to access the members of a structure using the dot operator and how to use header files to declare structures and functions.
+
+Revise struct_rect4_single_file_version.c to use array of points and rectangles.
 */
 
 #include <stdio.h>
