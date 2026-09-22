@@ -49,10 +49,11 @@ int main() {
     // rect r[N];
 
     // Dynamic memory allocation of arrays using malloc().
-    point* p = (point*)malloc(N * sizeof(point));
-    rect* r = (rect*)malloc(N * sizeof(rect));
+    point* p = (point*) malloc(N * sizeof(point));
+    rect* r = (rect*) malloc(N * sizeof(rect));
 
     // find sizeof() of structures and arrays of structures
+    // NOTE: sizeof(p) and sizeof(r) are no longer the sizes of arrays p[] and r[].
     int s[] = {sizeof(point), sizeof(rect), sizeof(p), sizeof(r)};
     print_s(s, sizeof(s)/sizeof(s[0]));
 
