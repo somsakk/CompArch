@@ -41,8 +41,7 @@ int main() {
     int width = 2, height = 3; 
     printf("Addresses: width = %p, height = %p\n", (void *)&width, (void *) &height);
 
-    int N=4;
-    
+    int N=2;
     printf("Enter the number of points and rectangles: ");
     scanf("%d", &N);
 
