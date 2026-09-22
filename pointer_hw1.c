@@ -13,7 +13,7 @@ int main(void)
     
     printf("Sizes: sizeof(contact)=%#x, sizeof(my_contacts)=%#x, sizeof(my_contacts[0])=%#x\n", 
         (int)sizeof(contact), (int)sizeof(my_contacts), (int) sizeof(my_contacts[0]));
-    printf("Length of my_contacsts: %d\n", (int) sizeof(my_contacts)/sizeof(my_contacts[0]));
+    printf("Length of my_contacsts: %d\n", (int)sizeof(my_contacts)/sizeof(my_contacts[0]));
 
     printf("Addresses of my_contacts[0]: %p\n", &my_contacts[0]);
     printf("Addresses of my_contacts[1]: %p\n", &my_contacts[1]);
