@@ -9,12 +9,13 @@ Revised from struct_rect4_single_file_version.c by using dynamic memory allocati
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 // a point is specified by (x,y) coordinate
 typedef struct point {
     int x;
     int y;
-    char name[4];  
+    char name[8];  
 } point;
 
 // a rectangle is specified by the lower-left and upper-right points and color.
@@ -22,7 +23,7 @@ typedef struct rect {
     point ll;
     point ur;
     int color;
-    char name[4];
+    char name[8];
 } rect;
 
 // Function prototypes for point and rect structures. 
@@ -41,26 +42,31 @@ int main() {
     printf("Addresses: width = %p, height = %p\n", (void *)&width, (void *) &height);
 
     int N=4;
-    // point p[N]; 
+    
+    printf("Enter the number of points and rectangles: ");
+    scanf("%d", &N);
+
+    // point p[N]; // static memory allocation
     // rect r[N];
 
+    // Dynamic memory allocation of arrays using malloc().
     point* p = (point*)malloc(N * sizeof(point));
     rect* r = (rect*)malloc(N * sizeof(rect));
 
-    char buffer[4];
-
+    // find sizeof() of structures and arrays of structures
     int s[] = {sizeof(point), sizeof(rect), sizeof(p), sizeof(r)};
     print_s(s, sizeof(s)/sizeof(s[0]));
 
+    char buffer[8];
     for (int i=0; i<N; i++) { 
-        sprintf(buffer, "p%d",i); 
+        snprintf(buffer, sizeof(buffer), "p%u", (uint8_t)i);
         set_point(&p[i], 40+i, 10+i, buffer); 
         print_point(p[i]);
         print_address_of_point(&p[i]);
     }
     
     for (int i=0; i<N; i++) { 
-        sprintf(buffer, "r%d",i); 
+        snprintf(buffer, sizeof(buffer), "r%u", (uint8_t)i);
         set_rect(&r[i], p[i], (point){p[i].x + width, p[i].y + height, ""}, 1, buffer); 
         print_rect(r[i]);
         print_address_of_rect(&r[i]);
