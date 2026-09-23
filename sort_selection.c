@@ -2,6 +2,28 @@
 // sort_selection.c
 #include <stdio.h>
 
+// function prototypes
+void swap(int*, int*);
+void printArray(int*, int n);
+void selectionSort(int*, int n);
+
+// Driver code
+int main()
+{
+	int arr[] = { 8, 23, 12, 14, 5}; 
+	// int arr[] = { 23, 14, 12, 8, 5}; // original array is in descending order
+	// int arr[] = { 5, 8, 12, 14, 23}; // original array is already sorted in asscending order
+
+	int n = sizeof(arr) / sizeof(arr[0]); // find arr size
+	printf("Original array: \n");
+	printArray(arr, n);
+	printf("The first element is %d at address %p\n\n", *arr, arr);
+
+	selectionSort(arr, n);
+	printf("\nSorted array in Ascending order: \n");
+	printArray(arr, n);
+}
+
 // swap function, takes in addresses of the two integers
 void swap(int* xp, int* yp)
 {
@@ -44,16 +66,3 @@ void selectionSort(int arr[], int n) // can also use int *arr
   }
 }
 
-// Driver code
-int main()
-{
-	int arr[] = { 8, 23, 12, 14, 5};
-	int n = sizeof(arr) / sizeof(arr[0]); // find arr size
-	printf("Original array: \n");
-	printArray(arr, n);
-	printf("The first element is %d at address %p\n\n", *arr, arr);
-
-	selectionSort(arr, n);
-	printf("\nSorted array in Ascending order: \n");
-	printArray(arr, n);
-}
