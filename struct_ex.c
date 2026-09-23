@@ -1,5 +1,21 @@
 // struct_ex.c
-#include "struct_ex.h" // point and rect structures are declared there
+// #include "struct_ex.h" // point and rect structures are declared there. ok if we run locally
+// but to run in onlinegdb or godbolt, we need to put everything in a single file
+#include <stdio.h>
+#include <stdint.h>
+
+// a point is specified by (x,y) coordinate
+typedef struct point {
+    int x;
+    int y;
+} point;
+
+// a rectangle is specified by the lower-left and upper-right points and color.
+typedef struct rect {
+    point ll;
+    point ur;
+    int color;
+} rect;
 
 int main() {
     int width = 2, height = 3; 
