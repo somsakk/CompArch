@@ -24,24 +24,6 @@ int main()
 	printArray(arr, n);
 }
 
-// swap function, takes in addresses of the two integers
-void swap(int* xp, int* yp)
-{
-	int temp = *xp;
-	printf("swap values: %d and %d, ", *xp, *yp);
-	printf("at addresses %p and %p\n", xp, yp);
-	*xp = *yp;
-	*yp = temp;
-}
-
-// Function to print an array
-void printArray(int arr[], int size) // can also use int *arr
-{
-	for (int i = 0; i < size; i++)
-		printf("%d ", arr[i]);
-	printf("\n");
-}
-
 /*Function to perform Selection Sort.
   Selection sort is a simple sorting algorithm that repeatedly finds the minimum element
   from the unsorted part of the array and places it at the beginning of the sorted part of 
@@ -65,4 +47,24 @@ void selectionSort(int arr[], int n) // can also use int *arr
 		}
   }
 }
+
+// swap function, takes in addresses of the two integers
+void swap(int* xp, int* yp)
+{
+	int temp = *xp;
+	printf("swap values: %d and %d, ", *xp, *yp);
+	printf("at addresses %p and %p\n", xp, yp);
+	*xp = *yp;
+	*yp = temp;
+}
+
+// Function to print an array
+void printArray(int arr[], int size) // can also use int *arr
+{
+	for (int i = 0; i < size; i++)
+		printf("%d ", arr[i]);
+	printf("\n");
+}
+
+
 
