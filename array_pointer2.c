@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<stdint.h>
 
-// 
+// pointer to different data sizes: int32_t, int8_t, int16_t
 int main(void)
 {
     // int32_t ar[3] = {93, 81, 97};
