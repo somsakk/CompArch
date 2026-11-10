@@ -15,7 +15,7 @@ int main() {
         printf("This never prints if exec succeeded\n");
     } else {
         // Parent: รอ child ทำงานเสร็จ
-        wait(NULL);
+        wait(NULL); // try to comment this out
         printf("Parent: child process finished\n");
     }
 
